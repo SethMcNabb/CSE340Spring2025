@@ -1,6 +1,252 @@
-/******* Change Box Model ***************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,0..900;1,100..900&display=swap');
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url('/images/site/checkerboard.jpg');
+  background-size: 300px 300px;
+  background-position: top left;
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+main {
+  padding: 10px;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .siteName a {
+  color: black;
+  text-decoration: none; 
+  font-size: 24px; 
+}
+nav {
+  background-color: #2e2e2e;
+  padding: 10px 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #0056b3;
+}
+
+ul li {
+  color: white;
+}
+
+#tools a {
+  color: black;
+  text-decoration: none;
+}
+/*
+.car-container {
+  position: relative;
+  width: 100%;
+}
+*/
+
+.car-container h1 {
+  text-align: left;
+  font-size: x-large;
+}
+
+
+.car-container img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  position: absolute;
+  top: -20;
+  left: 50%;
+  transform: translateX(-50%);
+  /* z-index: 1; */
+}
+
+.car-description {
+  position: relative;
+  /* z-index: 2; */
+  background-color: rgba(0, 128, 128, 0.1);
+  border: 1px solid #008080;
+  padding: 15px;
+  margin: 20px 0;
+  text-align: left;
+  border-radius: 8px;
+  max-width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #008080;
+}
+
+.car-description h1 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.car-description p {
+  margin: 5px 0;
+}
+
+.car-description button {
+  background-color: #008080;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.car-description button:hover {
+  background-color: #005757;
+  transform: scale(1.05);
+}
+
+.main-content {
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  /* z-index: 1; */
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* .background-image {
+  z-index: 0;
+} */
+
+.reviews {
+  margin: 20px 0;
+}
+
+.reviews li {
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  color: black;
+}
+
+.upgrades-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  align-items: center;
+}
+
+.upgrade-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightblue;
+  border: 1px solid #2e2e2e;
+}
+
+.upgrades img {
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+@media (min-width: 700px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-gap: 5%;
+  }
+
+  .car-container {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .upgrades {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .reviews {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .car-container img,
+  .upgrades img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.car-description {
+    max-width: 20%;
+    margin-left: -200px;
+  }
+
+  #wrapper {
+    border: 5px solid #008080;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 85%;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    /* z-index: 1; */
+  }
+}
+
+@media (max-width: 699px) {
+  body {
+    background-image: none;
+  }
+
+  .car-description {
+    max-width: 90%;
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .upgrades-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .car-container img {
+    max-width: 100%;
+  }
 }
