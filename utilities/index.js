@@ -58,4 +58,32 @@ Util.buildClassificationGrid = async function(data){
   return grid
 }
 
+/* **************************************
+ * Build the vehicle detail view HTML
+ ************************************ */
+Util.buildVehicleDetailHTML = (vehicleData) => {
+  const price = Number(vehicleData.inv_price) || 0; 
+  const mileage = Number(vehicleData.inv_miles) || 0;
+
+  const formattedPrice = price.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+  const formattedMileage = mileage.toLocaleString('en-US');
+
+  return `
+      <h1>${vehicleData.inv_make} ${vehicleData.inv_model}</h1>
+      <img src="${vehicleData.inv_image}" alt="${vehicleData.inv_make} ${vehicleData.inv_model}">
+      <p>Year: ${vehicleData.inv_year}</p>
+      <p>Price: ${formattedPrice}</p>
+      <p>Mileage: ${formattedMileage} miles</p>
+      <p>${vehicleData.inv_description}</p>
+  `;
+};
+
+/* ****************************************
+ * Middleware For Handling Errors
+ * Wrap other function in this for 
+ * General Error Handling
+ **************************************** */
+Util.handleErrors = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next)
+
+
 module.exports = Util

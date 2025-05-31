@@ -1,0 +1,17 @@
+<!-- filepath: /views/inventory/detail.ejs -->
+<% if (title) { %>
+  <h1><%= title %></h1>
+<% } %>
+<div class="vehicle-detail">
+  <img 
+    src="<%= vehicleData.inv_image %>"
+    alt="<%= vehicleData.inv_make %> <%= vehicleData.inv_model %>"
+  />
+  <div class="vehicle-info">
+    <h2><%= vehicleData.inv_year %> <%= vehicleData.inv_make %> <%= vehicleData.inv_model %></h2>
+    <p><strong>Price:</strong> $<%= vehicleData.inv_price.toLocaleString('en-US') %></p>
+    <p><strong>Mileage:</strong> <%= vehicleData.inv_miles.toLocaleString('en-US') %> miles</p>
+    <p><strong>Description:</strong> <%= vehicleData.inv_description %></p>
+    <p><strong>Color:</strong> <%= vehicleData.inv_color %></p>
+  </div>
+</div>
