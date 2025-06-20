@@ -17,6 +17,8 @@ body {
   background-position: top left;
   background-attachment: fixed;
   background-repeat: repeat;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1 {
@@ -64,8 +66,8 @@ nav a:hover {
   background-color: #0056b3;
 }
 
-ul li {
-  color: white;
+ul {
+  list-style: none;
 }
 
 #tools a {
