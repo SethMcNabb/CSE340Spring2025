@@ -1,9 +1,9 @@
-<!-- Header Content -->
-<% if (title) { %>
-<h1><%= title %></h1>
-<% } else {
-  res.redirect('/')
-} %>
+<div class="classification">
+  <% if (title) { %>
+  <h1><%= title %></h1>
+  <% } else {
+    res.redirect('/')
+  } %>
 
-<!-- Items to Display -->
-<%- grid %>
+  <%- grid %>
+</div>

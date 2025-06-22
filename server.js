@@ -6,6 +6,7 @@
 /* ***********************
  * Require Statements
  *************************/
+console.log("Require");
 const express = require("express")
 const expressLayouts = require("express-ejs-layouts")
 const env = require("dotenv").config()
@@ -22,6 +23,7 @@ const bodyParser = require("body-parser")
 /* ***********************
  * Middleware
  * ************************/
+console.log("Middleware");
  app.use(session({
   store: new (require('connect-pg-simple')(session))({
     createTableIfMissing: true,
@@ -54,6 +56,7 @@ app.set("layout", "./layouts/layout") // not at views root
 /* ***********************
  * Routes
  *************************/
+console.log("Routes");
 app.use(static)
 // Index route
 app.get("/", utilities.handleErrors(baseController.buildHome))
@@ -76,6 +79,7 @@ app.use(async (req, res, next) => {
 * Express Error Handler
 * Place after all other middleware
 *************************/
+console.log("Express Error Handler");
 app.use(async (err, req, res, next) => {
   let nav = await utilities.getNav()
   console.error(`Error at: "${req.originalUrl}": ${err.message}`)
@@ -91,12 +95,15 @@ app.use(async (err, req, res, next) => {
  * Local Server Information
  * Values from .env (environment) file
  *************************/
+console.log("Local Server Info");
 const port = process.env.PORT
 const host = process.env.HOST
 
 /* ***********************
  * Log statement to confirm server operation
  *************************/
+console.log("ENV PORT:", process.env.PORT)
+console.log("ENV HOST:", process.env.HOST)
 app.listen(port, () => {
   console.log(`app listening on ${host}:${port}`)
 })

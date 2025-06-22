@@ -1,0 +1,15 @@
+<div class="management">
+  <h1>Inventory Management</h1>
+
+  <% if (messages && messages.notice) { %>
+    <div class="flash-success"><%= messages.notice %></div>
+  <% } %>
+  <% if (messages && messages.error) { %>
+    <div class="flash-error"><%= messages.error %></div>
+  <% } %>
+
+  <div class="management-links">
+    <div><a href="/inv/add-classification" class="btn">Add new classification</a></div>
+    <div><a href="/inv/add-inventory" class="btn">Add new inventory</a></div>
+  </div>
+</div>
