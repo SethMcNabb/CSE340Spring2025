@@ -38,8 +38,8 @@ header {
 
 header .siteName a {
   color: black;
-  text-decoration: none; 
-  font-size: 24px; 
+  text-decoration: none;
+  font-size: 24px;
 }
 
 nav {
@@ -69,11 +69,6 @@ nav a:hover {
 
 ul {
   list-style: none;
-}
-
-#tools a {
-  color: black;
-  text-decoration: none;
 }
 
 .car-container h1 {
@@ -172,19 +167,39 @@ ul {
   max-height: 100px;
 }
 
+.flash-success,
+.flash-error,
+.notice {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
 
+.flash-success {
+  background-color: #e6ffed;
+  color: #1a7f37;
+  border: 1px solid #b1e2c1;
+}
 
-/* classification view */
+.flash-error,
+.notice {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #ffb3b3;
+}
+
 .classification h1 {
   font-size: 2rem;
 }
+
 #inv-display {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   gap: 50px;
   max-width: 450px;
   list-style: none;
-  padding: px;
+  padding: 0px;
   margin: 5px auto;
 }
 
@@ -192,32 +207,36 @@ ul {
   background-color: #f9f9f9;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
-  padding: 10px; 
+  padding: 10px;
 }
-
 
 #inv-display li:hover {
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
 #inv-display img {
   width: 100%;
   height: auto;
   display: block;
 }
+
 .namePrice {
   padding: 1rem;
   text-align: center;
 }
+
 .namePrice h2 {
   font-size: 1.1rem;
   margin: 0.5rem 0;
 }
+
 .namePrice h2 a {
   text-decoration: none;
   color: #333;
 }
+
 .namePrice span {
   display: block;
   font-weight: bold;
@@ -225,9 +244,7 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   margin-top: 0.5rem;
 }
 
-/* detail view */
 .vehicle-detail {
-  background-color: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,7 +252,7 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #f9f9f9; 
+  background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -253,7 +270,6 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
 .vehicle-info {
   width: 100%;
-  background-color: none;
 }
 
 .vehicle-info h2 {
@@ -273,13 +289,11 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   color: #222;
 }
 
-/* management view */
 .management {
-  background-color: none;
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #f9f9f9; 
+  background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
@@ -290,26 +304,6 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: #333;
-}
-
-.flash-success,
-.flash-error {
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.flash-success {
-  background-color: #e6ffed;
-  color: #1a7f37;
-  border: 1px solid #b1e2c1;
-}
-
-.flash-error {
-  background-color: #ffe6e6;
-  color: #cc0000;
-  border: 1px solid #ffb3b3;
 }
 
 .management-links {
@@ -333,9 +327,7 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   background-color: #0056b3;
 }
 
-/* add-classification view */
 .add-classification-view {
-  background-color: none;
   max-width: 500px;
   margin: 3rem auto;
   padding: 2rem;
@@ -400,13 +392,11 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   background-color: #0056b3;
 }
 
-/* add-inventory view */
 .add-inventory-view {
-  background-color: none;
   max-width: 700px;
   margin: 3rem auto;
   padding: 2rem;
-  background-color: #f9f9f9; 
+  background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
   font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -419,9 +409,9 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   color: #333;
 }
 
-.flash-success,
-.flash-error,
-.notice {
+.add-inventory-view .flash-success,
+.add-inventory-view .flash-error,
+.add-inventory-view .notice {
   padding: 0.75rem 1rem;
   border-radius: 6px;
   margin-bottom: 1rem;
@@ -429,14 +419,14 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   list-style-type: disc;
 }
 
-.flash-success {
+.add-inventory-view .flash-success {
   background-color: #e6ffed;
   color: #1a7f37;
   border: 1px solid #b1e2c1;
 }
 
-.flash-error,
-.notice {
+.add-inventory-view .flash-error,
+.add-inventory-view .notice {
   background-color: #ffe6e6;
   color: #cc0000;
   border: 1px solid #ffb3b3;
@@ -490,6 +480,496 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   background-color: #0056b3;
 }
 
+.login-view {
+  background-color: #f9f9f9;
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  text-align: center;
+}
+
+.login-view h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.login-view .flash-success,
+.login-view .flash-error,
+.login-view .notice {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  list-style-type: none;
+  text-align: left;
+}
+
+.login-view .flash-success {
+  background-color: #e6ffed;
+  color: #1a7f37;
+  border: 1px solid #b1e2c1;
+}
+
+.login-view .flash-error,
+.login-view .notice {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #ffb3b3;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+#loginForm div {
+  display: flex;
+  flex-direction: column;
+}
+
+#loginForm label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+#loginForm input[type="email"],
+#loginForm input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.password-requirements {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+#loginForm button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  width: auto;
+}
+
+#loginForm button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.login-view p {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.login-view p a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.login-view p a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.account-management {
+  background-color: #f9f9f9;
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  text-align: center;
+}
+
+.account-management h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.account-management h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.account-management h3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.account-management .flash-success,
+.account-management .flash-error {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.account-management .flash-success {
+  background-color: #e6ffed;
+  color: #1a7f37;
+  border: 1px solid #b1e2c1;
+}
+
+.account-management .flash-error {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #ffb3b3;
+}
+
+.account-management p {
+  margin: 0.75rem 0;
+}
+
+.account-management a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.account-management a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.account-update-view {
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  text-align: center;
+}
+
+.account-update-view h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.account-update-view .flash-success,
+.account-update-view .flash-error,
+.account-update-view .notice {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: left;
+  list-style-type: none;
+}
+
+.account-update-view .flash-success {
+  background-color: #e6ffed;
+  color: #1a7f37;
+  border: 1px solid #b1e2c1;
+}
+
+.account-update-view .flash-error,
+.account-update-view .notice {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #ffb3b3;
+}
+
+.account-update-view .account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.account-update-view .account-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.account-update-view .account-form p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.account-update-view .account-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-update-view .account-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.account-update-view .account-form input[type="text"],
+.account-update-view .account-form input[type="email"],
+.account-update-view .account-form input[type="password"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.account-update-view .account-form button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  width: auto;
+  margin-top: 1rem;
+}
+
+.account-update-view .account-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.edit-inventory-view {
+  background-color: #f9f9f9;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  text-align: center;
+}
+
+.edit-inventory-view h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.edit-inventory-view .flash-success,
+.edit-inventory-view .flash-error,
+.edit-inventory-view .notice {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: left;
+  list-style-type: none;
+}
+
+.edit-inventory-view .flash-success {
+  background-color: #e6ffed;
+  color: #1a7f37;
+  border: 1px solid #b1e2c1;
+}
+
+.edit-inventory-view .flash-error,
+.edit-inventory-view .notice {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #ffb3b3;
+}
+
+.edit-inventory-view #updateForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.edit-inventory-view #updateForm div {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-inventory-view #updateForm label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.edit-inventory-view #updateForm input[type="text"],
+.edit-inventory-view #updateForm input[type="number"],
+.edit-inventory-view #updateForm textarea,
+.edit-inventory-view #updateForm select {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  resize: vertical;
+}
+
+.edit-inventory-view #updateForm textarea {
+  min-height: 100px;
+}
+
+.edit-inventory-view #updateForm button[type="submit"] {
+  align-self: center;
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+}
+
+.edit-inventory-view #updateForm button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.edit-inventory-view #updateForm button[type="submit"][disabled] {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.delete-confirm-view {
+  background-color: #f9f9f9;
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  text-align: center;
+}
+
+.delete-confirm-view h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.delete-confirm-view p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.delete-confirm-view .flash-success,
+.delete-confirm-view .flash-error,
+.delete-confirm-view .notice {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: left;
+  list-style-type: none;
+}
+
+.delete-confirm-view .flash-success {
+  background-color: #e6ffed;
+  color: #1a7f37;
+  border: 1px solid #b1e2c1;
+}
+
+.delete-confirm-view .flash-error,
+.delete-confirm-view .notice {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #ffb3b3;
+}
+
+.delete-confirm-view form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.delete-confirm-view form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-confirm-view form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.delete-confirm-view form input[type="text"][readonly] {
+  background-color: #e9ecef;
+  color: #495057;
+  border: 1px solid #ced4da;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  width: 100%;
+  cursor: default;
+}
+
+.delete-confirm-view form button[type="submit"] {
+  background-color: #dc3545;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  width: auto;
+  margin-top: 1rem;
+}
+
+.delete-confirm-view form button[type="submit"]:hover {
+  background-color: #c82333;
+}
+
 @media (min-width: 700px) {
   .main-content {
     display: grid;
@@ -541,6 +1021,20 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     background-image: none;
   }
 
+  .login-view,
+  .account-management,
+  .account-update-view,
+  .add-classification-view,
+  .add-inventory-view,
+  .edit-inventory-view {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+  }
+
+  .account-update-view .account-form {
+    padding: 1rem;
+  }
+
   .car-description {
     max-width: 90%;
     margin-left: 0;
@@ -554,5 +1048,14 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
   .car-container img {
     max-width: 100%;
+  }
+
+  .delete-confirm-view {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+  }
+
+  .delete-confirm-view form {
+    padding: 1rem;
   }
 }

@@ -5,20 +5,33 @@
 
 /* ***********************
  * Require Statements
- *************************/
-console.log("Require");
+*************************/
+console.log("Require 1");
 const express = require("express")
+console.log("Require 2");
 const expressLayouts = require("express-ejs-layouts")
+console.log("Require 3");
 const env = require("dotenv").config()
+console.log("Require 4");
 const app = express()
+console.log("Require 5");
 const static = require("./routes/static")
+console.log("Require 6");
 const baseController = require("./controllers/baseController")
+console.log("Require 7");
 const inventoryRoute = require("./routes/inventoryRoute")
+console.log("Require 8");
 const accountRoute = require("./routes/accountRoute")
+console.log("Require 9");
 const utilities = require("./utilities")
+console.log("Require 10");
 const session = require("express-session")
+console.log("Require 11");
 const pool = require('./database/')
+console.log("Require 12");
 const bodyParser = require("body-parser")
+console.log("Require 13");
+const cookieParser = require("cookie-parser")
 
 /* ***********************
  * Middleware
@@ -44,7 +57,16 @@ app.use(function(req, res, next){
 
 // Body Parser Middleware
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(cookieParser())
+
+app.use(utilities.checkJWTToken)
+
+app.use((req, res, next) => {
+  res.locals.accountData = req.session.accountData || null
+  next()
+})
 
 /* ***********************
  * View Engine and Templates

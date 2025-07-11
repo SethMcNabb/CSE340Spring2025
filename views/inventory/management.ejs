@@ -12,4 +12,14 @@
     <div><a href="/inv/add-classification" class="btn">Add new classification</a></div>
     <div><a href="/inv/add-inventory" class="btn">Add new inventory</a></div>
   </div>
+
+  <h2>Manage Inventory</h2>
+  <p>Select a classification from the list to see the items belonging to the classification.</p>
+
+  <%- classificationList %>
+
+  <table id="inventoryDisplay"></table>
+
+  <noscript>JavaScript must be enabled to use this page.</noscript>
+  <script src="../../js/inventory.js"></script>
 </div>
